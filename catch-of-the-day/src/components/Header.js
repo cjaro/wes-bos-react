@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = (props) => {
-  console.log(this);
+  // console.log(this);
   return (
     <header className="top">
       <h1>

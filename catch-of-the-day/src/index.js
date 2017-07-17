@@ -5,15 +5,20 @@ import './css/style.css';
 import {BrowserRouter, Match, Miss } from 'react-router';
 
 import App from './components/App';
-
 import StorePicker from './components/StorePicker';
+import NotFound from './components/NotFound';
 
 const Root = () => {
   return (
     <BrowserRouter>
-      <Match exactly pattern="/" component={StorePicker} />
+      <div>
+        <Match exactly pattern="/" component={StorePicker} />
+        <Match exactly pattern="/store/:storeId" component={App} />
+        <Miss component={NotFound} />
+      </div>
     </BrowserRouter>
+
   )
 }
 
-render(<App/>, document.querySelector('#main'));
+render(<Root/>, document.querySelector('#main'));
