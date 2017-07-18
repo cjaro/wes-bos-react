@@ -1,6 +1,10 @@
 import React from 'react';
 
+//  giving form its own component in case of use elsewhere in app
+
 class AddFishForm extends React.Component{
+  // we need to create a fish object on form submit to store data
+  // make a method called createFish
   createFish(event){
     event.preventDefault();
     console.log('gonna make sum fish');
@@ -12,10 +16,16 @@ class AddFishForm extends React.Component{
       image: this.image.value,
       }
     console.log(fish);
+    //now we can access addFish from here, passed from Inventory
     this.props.addFish(fish);
     this.fishForm.reset();
   }
 
+// create form element
+// how to take text out of these inputs and inject into object?
+// want fish object with these fields
+// use refs
+// these arrow functions allow us to save the entered data
   render(){
     return (
       <form ref={(input) => this.fishForm = input} className="fish-edit" onSubmit={(e) => this.createFish(e)}>
