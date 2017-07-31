@@ -8,7 +8,7 @@ import AddFishForm from './AddFishForm';
 class Inventory extends React.Component{
   // comment is for button, since React comments are wack
   // it's not this.loadSamples because loadSamples doesn't live here
-  // loadSamples lives where our state lives, up in App.js
+  // loadSamples lives where our state lives, up in App.js, not here in Inventory
   // see there: now we're passing down via props in the button onClick
   render(){
     return (
