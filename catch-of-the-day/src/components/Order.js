@@ -3,10 +3,10 @@ import { formatPrice } from '../helpers'
 
 class Order extends React.Component {
   // to access 'this' inside a method? BIND it!
-    constructor(){
-      super();
-      this.renderOrder = this.renderOrder.bind(this);
-    }
+  constructor(){
+    super();
+    this.renderOrder = this.renderOrder.bind(this);
+  }
   //make this method that will give us the key for each item added to order
   renderOrder(key){
     const fish = this.props.fishes[key];

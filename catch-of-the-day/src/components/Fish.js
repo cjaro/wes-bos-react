@@ -7,6 +7,7 @@ class Fish extends React.Component{
     // ^^^ here we're setting variables like thing as things in thing.item.stuff in angular
     // want to add a button that changes based on availablity
     // when state changes, DOM is updated
+    // data massaging - const details = this.props.details 
     const isAvailable = details.status === 'available';
     const buttonText = isAvailable ? 'Add to Order' : 'Sold Out!';
     return (

@@ -60,6 +60,7 @@ class App extends React.Component{
     // object spread takes copy of existing order state
     const order = {...this.state.order};
     //update or add new number of fish orders
+    // the or operator - adds to existing, or a new one
     order[key] = order[key] + 1 || 1;
     //update state
     this.setState({
